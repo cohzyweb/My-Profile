@@ -34,7 +34,7 @@ export const Navbar = () => {
                     </span>
                 </a>
 
-                {/* desktop version*/}
+                {/* desktop nav*/}
                 <div className="hidden md:flex space-x-8">
                     {navItems.map((item, key) => (
                         <a key={key} href={item.href} className="text-foreground/80 hover:text-primary transition-colors duration-300">
@@ -44,7 +44,6 @@ export const Navbar = () => {
                 </div>
 
                 {/* mobile version */}
-                <butto></butto>
                 <div className={cn("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center",
                     "transition-all duration-300 md:hidden",
                     isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
@@ -61,7 +60,7 @@ export const Navbar = () => {
                     ))}
                 </div>
 
-                {/* Mobile menu button */}
+                {/* Mobile nav */}
                 <button 
                     className="md:hidden p-2"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
