@@ -101,3 +101,9 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+
+@utility container{
+    margin-inline: auto;
+    padding-inline: 2rem
+
+}
