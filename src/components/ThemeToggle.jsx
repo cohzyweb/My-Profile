@@ -30,12 +30,12 @@ export const ThemeToggle = () => {
     className={cn("fixed z-50 p-2 rounded-full transition-colors duration-300",
                    "focus:outline-none bg-background/80 backdrop-blur-sm border",
                    "top-5 right-20",
-                   "sm:top-6 sm:right-6"
+                   "sm:top-4 sm:right-3"
     )}
     >
       {isDarkMode ? 
-        <Sun className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-300" /> : 
-        <Moon className="h-5 w-5 sm:h-6 sm:w-6 text-blue-900" />
+        <Sun className="h-3 w-5 sm:h-6 sm:w-6 text-yellow-300" /> : 
+        <Moon className="h-3 w-5 sm:h-6 sm:w-6 text-blue-900" />
       }
     </button>
   );
