@@ -26,6 +26,7 @@ const categories = ["all", "frontend", "backend", "tools"];
 export const SkillsSection = () => {
     const [activeCategory, setActiveCategory] = useState("all");
 
+    const filteredSkills
     return (
         <section id="skills" className="py-24 px-4 relative bg-secondary/30">
             <div className="container mx-auto max-w-5xl">
@@ -35,9 +36,16 @@ export const SkillsSection = () => {
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     {categories.map((category, key) => (
-                        <button key={key} 
-                        onClick={() => setActiveCategory(category)}
-                        className={cn("px-5 py-2 rounded-full transition-colors duration-300 capitalize")}>
+                        <button 
+                            key={key} 
+                            onClick={() => setActiveCategory(category)}
+                            className={cn(
+                                "px-5 py-2 rounded-full transition-colors duration-300 capitalize border",
+                                activeCategory === category 
+                                    ? "bg-primary text-primary-foreground" 
+                                    : "bg-secondary/70 text-forefround hover:bd-secondary"
+                            )}
+                        >
                             {category}
                         </button>
                     ))}
@@ -45,7 +53,7 @@ export const SkillsSection = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     {skills.map((skill, key) => (
-                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover">
+                        <div key={key} className="bg-card p-6 rounded-lg shadow-xs card-hover border">
                             <div className="text-left mb-4">
                                 <h3 className="font-semibold text-lg">{skill.name}</h3>
                             </div>
