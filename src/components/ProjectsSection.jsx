@@ -1,10 +1,12 @@
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
+
 const projects = [
   {
     id: "1",
     title: "Landing Page",
     description: "An awesome landing page app using Framer, HTML and CSS",
     image: "/Projects/Project 1.png",
-    tags: "HTML/CSS, JavaScript, Framer",
+    tags: ["HTML/CSS", "JavaScript", "Framer"],
     demoUrl: "http://ololadeadesuyi.com/",
     githubUrl: "https://github.com/cohzyweb/Lolade",
   },
@@ -14,7 +16,7 @@ const projects = [
     description:
       "An awesome commercial web app using TailwindCSS, JavaScript, HTML and CSS",
     image: "/Projects/Project 2.png",
-    tags: "HTML/CSS, JavaScript, TailwindCSS",
+    tags: ["HTML/CSS", "JavaScript", "TailwindCSS"],
     demoUrl: "https://aerohubnigeria.netlify.app/",
     githubUrl: "https://github.com/cohzyweb/aerohub_nigeria",
   },
@@ -23,7 +25,7 @@ const projects = [
     title: "Furniture Website",
     description: "An awesome commercial web app using HTML, CSS, and JavaScript",
     image: "/Projects/Project 3.png",
-    tags: "HTML/CSS, JavaScript",
+    tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "https://thecremroomfurniture.netlify.app/",
     githubUrl: "https://github.com/cohzyweb/TCR",
   },
@@ -58,9 +60,59 @@ export const ProjectsSection = () => {
                 />
               </div>
 
-              <div></div>
+              <div className="p-6 text-center">
+                <div className="flex flex-wrap justify-center gap-2 mb-4">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 text-xs font-medium border rounded-full bg-primary/20 text-secondary-foreground"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+
+                <h3 className="text-xl font-semibold mb-1">
+                  {project.title}
+                </h3>
+
+                <p className="text-muted-foreground text-sm mb-4">
+                  {project.description}
+                </p>
+
+                <div className="flex justify-center gap-4">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    <ExternalLink size={20} />
+                  </a>
+
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-primary transition-colors"
+                  >
+                    <Github size={20} />
+                  </a>
+                </div>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <a
+            href="https://github.com/cohzyweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+          >
+            Check My GitHub <ArrowRight size={16} />
+          </a>
         </div>
       </div>
     </section>
