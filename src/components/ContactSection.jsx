@@ -50,7 +50,7 @@ export const ContactSection = () => {
                                         href="tel:+2347018961857"
                                         className="text-muted-foreground hover:text-primary transition-colors"
                                     >
-                                        (+234) 701 896 1857
+                                        (+234) 803 389 989218
                                     </a>
                                 </div>
                             </div>
