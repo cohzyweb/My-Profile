@@ -1,4 +1,5 @@
-import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter, Facebook, Send } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export const ContactSection = () => {
     return (
@@ -72,16 +73,32 @@ export const ContactSection = () => {
                                 Connect With Me
                             </h4>
                             <div className="flex space-x-6 justify-center">
-                                <a href="www.linkedin.com/in/boluwatife-ogunjana-16a806212" target="_blank">
+                                <a
+                                    href="https://www.linkedin.com/in/boluwatife-ogunjana-16a806212"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <Linkedin className="h-6 w-6 text-primary" />
                                 </a>
-                                <a href="https://x.com/Ze_rith" target="_blank">
+                                <a
+                                    href="https://x.com/Ze_rith"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <Twitter className="h-6 w-6 text-primary" />
                                 </a>
-                                <a href="https://www.instagram.com/_ze_rith?igsh=bDI3OWdtczk5cjhv" target="_blank">
+                                <a
+                                    href="https://www.instagram.com/_ze_rith?igsh=bDI3OWdtczk5cjhv"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <Instagram className="h-6 w-6 text-primary" />
                                 </a>
-                                <a href="https://www.facebook.com/share/1EjeNfCgHd/" target="_blank">
+                                <a
+                                    href="https://www.facebook.com/share/1EjeNfCgHd/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     <Facebook className="h-6 w-6 text-primary" />
                                 </a>
                             </div>
@@ -89,39 +106,72 @@ export const ContactSection = () => {
                     </div>
 
                     <div className="bg-card p-8 rounded-lg shadow-xs">
-                        <h3 className="text=2xl font-semibold mb-6">Send A Message</h3>
+                        <h3 className="text-2xl font-semibold mb-6">
+                            Send A Message
+                        </h3>
 
-                        <form className="space-y-6"> 
+                        <form className="space-y-6">
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
-                                <input 
-                                type="text" 
-                                id="name" name="name" 
-                                required
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus: ring-primary"
-                                placeholder="Cohzy Web....."/>
+                                <label
+                                    htmlFor="name"
+                                    className="block text-sm font-medium mb-2"
+                                >
+                                    Your Name
+                                </label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                                    placeholder="Cohzy Web..."
+                                />
                             </div>
+
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium mb-2">Your Name</label>
-                                <input 
-                                type="text" 
-                                id="name" name="name" 
-                                required
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus: ring-primary"
-                                placeholder="Cohzy Web....."/>
+                                <label
+                                    htmlFor="email"
+                                    className="block text-sm font-medium mb-2"
+                                >
+                                    Your Email
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary"
+                                    placeholder="johndoe@gmail.com"
+                                />
                             </div>
+
                             <div>
-                                <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
-                                <input 
-                                type="text" 
-                                id="name" name="name" 
-                                required
-                                className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus: ring-primary"
-                                placeholder="Cohzy Web....."/>
+                                <label
+                                    htmlFor="message"
+                                    className="block text-sm font-medium mb-2"
+                                >
+                                    Your Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                    className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                                    placeholder="Hello, I'd like to talk about..."
+                                />
                             </div>
+
+                            <button
+                                type="submit"
+                                className={cn(
+                                    "cosmic-button w-full flex items-center justify-center"
+                                )}
+                            >
+                                Send Message
+                               <Send size={16} />
+                            </button>
                         </form>
                     </div>
-                    
                 </div>
             </div>
         </section>
