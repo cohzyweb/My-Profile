@@ -58,9 +58,11 @@ export const Navbar = () => {
       <div className="flex items-center justify-between px-4 sm:px-5">
         {/* Logo */}
         <a className="flex items-center gap-2.5 group" href="#hero">
-          <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-sm font-bold text-white shadow-md shadow-primary/30 transition-transform duration-300 group-hover:scale-105 font-display">
-            B
-          </span>
+          <img
+            src="/logo.svg"
+            alt="Cohzyweb logo"
+            className="h-8 w-8 transition-transform duration-300 group-hover:scale-105"
+          />
           <span className="font-display font-semibold tracking-tight text-[15px]">
             Cohzyweb
           </span>

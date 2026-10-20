@@ -25,9 +25,11 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <a className="flex items-center gap-2.5 group" href="#hero">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-accent text-sm font-bold text-white shadow-md shadow-primary/30 font-display">
-              B
-            </span>
+            <img
+              src="/logo.svg"
+              alt="Cohzyweb logo"
+              className="h-8 w-8"
+            />
             <span className="font-display font-semibold tracking-tight">
               Cohzyweb
             </span>
