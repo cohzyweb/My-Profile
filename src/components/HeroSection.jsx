@@ -22,11 +22,11 @@ export const HeroSection = () => {
           <div className="flex justify-center opacity-0 animate-fade-in">
             <div className="relative">
               <div className="gradient-ring absolute -inset-1.5 rounded-full opacity-80" />
-              <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-card border border-border shadow-2xl shadow-primary/20 p-3">
+              <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-card border border-border shadow-2xl shadow-primary/20 overflow-hidden">
                 <img
-                  src="/logo.svg"
-                  alt="Cohzyweb logo"
-                  className="h-full w-full object-contain"
+                  src="/profile.png"
+                  alt="Boluwatife Ogunjana"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
               <span className="absolute bottom-1 right-1 flex h-5 w-5 items-center rounded-full bg-emerald-400 border-2 border-background">
