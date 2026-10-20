@@ -14,7 +14,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-28 pb-20"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-28 pb-16"
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-8">
@@ -90,13 +90,14 @@ export const HeroSection = () => {
         </div>
       </div>
 
+      {/* Scroll indicator — in-flow so it never overlaps the socials */}
       <a
         href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        className="relative z-10 mt-12 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
         aria-label="Scroll to about section"
       >
         <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <span className="flex h-8 w-5 items-start justify-center rounded-full border border-border p-1">
+        <span className="flex h-8 w-5 items-start justify-center rounded-full border border-border p-1 group-hover:border-primary/40 transition-colors">
           <span className="h-1.5 w-1.5 rounded-full bg-primary animate-bounce" />
         </span>
       </a>
