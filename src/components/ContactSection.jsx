@@ -9,6 +9,7 @@ import {
   Send,
 } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "./Reveal";
 
 const contactInfo = [
   {
@@ -59,11 +60,9 @@ export const ContactSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-8">
             <div className="space-y-4">
-              {contactInfo.map((info) => (
-                <div
-                  key={info.label}
-                  className="glass p-5 rounded-2xl flex items-center gap-4 card-hover group"
-                >
+              {contactInfo.map((info, index) => (
+                <Reveal key={info.label} delay={index * 100}>
+                  <div className="glass p-5 rounded-2xl flex items-center gap-4 card-hover group">
                   <div className="p-3 rounded-xl bg-primary/10 border border-primary/15 transition-all duration-300 group-hover:scale-105">
                     <info.icon className="h-5 w-5 text-primary" />
                   </div>
@@ -81,33 +80,37 @@ export const ContactSection = () => {
                     ) : (
                       <span className="font-medium">{info.value}</span>
                     )}
+                    </div>
                   </div>
-                </div>
+                </Reveal>
               ))}
             </div>
 
-            <div className="glass p-6 rounded-2xl">
-              <h4 className="font-display font-medium mb-4 text-center">
-                Connect With Me
-              </h4>
-              <div className="flex gap-3 justify-center">
-                {socials.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.name}
-                    className="glass p-3 rounded-full text-muted-foreground hover:text-primary hover:border-primary/40 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-0.5"
-                  >
-                    <social.icon size={18} />
-                  </a>
-                ))}
+            <Reveal delay={300}>
+              <div className="glass p-6 rounded-2xl">
+                <h4 className="font-display font-medium mb-4 text-center">
+                  Connect With Me
+                </h4>
+                <div className="flex gap-3 justify-center">
+                  {socials.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.name}
+                      className="glass p-3 rounded-full text-muted-foreground hover:text-primary hover:border-primary/40 hover:shadow-md hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-0.5"
+                    >
+                      <social.icon size={18} />
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Reveal>
           </div>
 
-          <div className="glass-strong p-8 rounded-2xl">
+          <Reveal delay={200} className="h-full">
+          <div className="glass-strong p-8 rounded-2xl h-full">
             <h3 className="font-display text-2xl font-semibold mb-6">
               Send A Message
             </h3>
@@ -170,6 +173,7 @@ export const ContactSection = () => {
               </button>
             </form>
           </div>
+          </Reveal>
         </div>
       </div>
     </section>

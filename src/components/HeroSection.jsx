@@ -20,7 +20,7 @@ export const HeroSection = () => {
         <div className="space-y-8">
           {/* Avatar */}
           <div className="flex justify-center opacity-0 animate-fade-in">
-            <div className="relative">
+            <div className="relative animate-float">
               <div className="gradient-ring absolute -inset-1.5 rounded-full opacity-80" />
               <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-card border border-border shadow-2xl shadow-primary/20 overflow-hidden">
                 <img

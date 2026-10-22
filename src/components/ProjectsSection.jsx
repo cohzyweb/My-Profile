@@ -1,5 +1,6 @@
 import { ExternalLink, Github, ArrowRight } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "./Reveal";
 
 const projects = [
   {
@@ -46,13 +47,8 @@ export const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className="group glass rounded-2xl overflow-hidden card-hover"
-              style={{
-                animation: `reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${index * 100}ms both`,
-              }}
-            >
+            <Reveal key={project.id} delay={index * 120} className="h-full">
+              <div className="group glass rounded-2xl overflow-hidden card-hover h-full">
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
@@ -106,10 +102,11 @@ export const ProjectsSection = () => {
                 </p>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
 
-        <div className="text-center mt-14">
+        <Reveal className="text-center mt-14">
           <a
             href="https://github.com/cohzyweb"
             target="_blank"
@@ -118,7 +115,7 @@ export const ProjectsSection = () => {
           >
             Check My GitHub <ArrowRight size={16} />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

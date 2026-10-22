@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Reveal } from "./Reveal";
 
 export const SectionHeading = ({
   eyebrow,
@@ -8,7 +9,7 @@ export const SectionHeading = ({
   className,
 }) => {
   return (
-    <div className={cn("mb-14 text-center", className)}>
+    <Reveal className={cn("mb-14 text-center", className)}>
       {eyebrow && (
         <span className="inline-flex items-center gap-2 px-4 py-1.5 mb-5 text-xs font-medium tracking-widest uppercase rounded-full border border-primary/20 bg-primary/5 text-primary">
           {eyebrow}
@@ -23,6 +24,6 @@ export const SectionHeading = ({
           {description}
         </p>
       )}
-    </div>
+    </Reveal>
   );
 };

@@ -1,5 +1,6 @@
 import { Briefcase, User, Code } from "lucide-react";
 import { SectionHeading } from "./SectionHeading";
+import { Reveal } from "./Reveal";
 
 const features = [
   {
@@ -29,7 +30,8 @@ export const AboutSection = () => {
         <SectionHeading eyebrow="Get to know me" title="About" accent="Me" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-          <div className="space-y-6">
+          <Reveal>
+            <div className="space-y-6">
             <h3 className="font-display text-2xl md:text-3xl font-semibold tracking-tight">
               Passionate Web Developer &amp; Tech Creator
             </h3>
@@ -60,28 +62,28 @@ export const AboutSection = () => {
                 Download CV
               </a>
             </div>
-          </div>
+            </div>
+          </Reveal>
 
           <div className="grid grid-cols-1 gap-5">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="gradient-border p-6 card-hover group"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 border border-primary/15 transition-all duration-300 group-hover:bg-primary/15 group-hover:scale-105">
-                    <feature.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <div className="text-left">
-                    <h4 className="font-display font-semibold text-lg mb-1">
-                      {feature.title}
-                    </h4>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
+            {features.map((feature, index) => (
+              <Reveal key={feature.title} delay={index * 120}>
+                <div className="gradient-border p-6 card-hover group">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-primary/10 border border-primary/15 transition-all duration-300 group-hover:bg-primary/15 group-hover:scale-105">
+                      <feature.icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <div className="text-left">
+                      <h4 className="font-display font-semibold text-lg mb-1">
+                        {feature.title}
+                      </h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
