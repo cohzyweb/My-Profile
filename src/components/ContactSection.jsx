@@ -34,7 +34,7 @@ const contactInfo = [
 const socials = [
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/boluwatife-ogunjana-16a806212",
+    href: "https://www.linkedin.com/in/boluwatife-ogunjana",
     icon: Linkedin,
   },
   { name: "Twitter", href: "https://x.com/Ze_rith", icon: Twitter },

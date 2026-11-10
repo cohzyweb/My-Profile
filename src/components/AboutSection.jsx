@@ -54,7 +54,7 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href="https://docs.google.com/document/d/1LxKiqc_6yU9jAOX3JoZmrYVpKa6HvlCPc1C4othInhA/edit?usp=sharing"
+                href="https://drive.google.com/file/d/12aJl_CSIJHGSd_Q_11fWw9aMzlVdaWSh/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cosmic-button-ghost"
